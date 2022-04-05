@@ -27,13 +27,12 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: "index.pug",
-            minify: {
-                collapseWhitespace: isProd
-            }
-
+            template: 'index.pug',
+            filename: "index.html",
+            minify: isProd
         }),
-        new HtmlWebpackPugPlugin(),
+        new HtmlWebpackPugPlugin({
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].[hash].css"
@@ -55,6 +54,11 @@ module.exports = {
                 test: /\.(jpg|jpeg|png|svg)$/,
                 use: ["file-loader"]
             },
+            {
+                test: /\.pug$/,
+                use: ["pug-loader"]
+            },
+
         ]
     }
 }
