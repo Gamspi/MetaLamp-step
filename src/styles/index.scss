@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import "./constants";
-@import "./mixins";
-
+@import "mixins";
+@import "constants";
+@import "rengeSlider";
 * {
   block-size: border-box;
   padding: 0;
@@ -50,4 +50,4 @@ body {
 
 
 
-@include Toggle
+

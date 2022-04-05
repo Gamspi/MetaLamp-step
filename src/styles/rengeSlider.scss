@@ -1,0 +1,54 @@
+@mixin dote {
+  & {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
+.rangeSlider {
+  position: relative;
+  width: 266px;
+  height: 6px;
+  background: #FFFFFF;
+  border: 1px solid $DarkShade25;
+  border-radius: 3px;
+  margin: 10px;
+
+  input {
+    position: absolute;
+    min-width: 103%;
+    top: 0;
+    left: -2px;
+    height: 6px;
+    pointer-events: none;
+    background: none;
+    -webkit-appearance: none;
+    z-index: 1;
+
+    &[type=range]::-webkit-slider-thumb {
+      @include dote
+    }
+    &[type=range]::-moz-range-thumb{
+      @include dote;
+      border: none;
+
+    }
+  }
+
+  .progress {
+    content: "";
+    position: absolute;
+    height: 6px;
+    background: linear-gradient(180deg, $Green 0%, #66D2EA 100%);
+    border-radius: 3px;
+    z-index: 0;
+  }
+
+}

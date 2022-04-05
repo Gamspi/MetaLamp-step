@@ -1,4 +1,3 @@
-
 @mixin styledInput {
   background: #FFFFFF;
   border: 1px solid $DarkShade25;
@@ -25,7 +24,7 @@
   }
 }
 
-@mixin btnBlue($width:99px,$array) {
+@mixin btnBlue($width:99px) {
   button {
     width: $width;
     height: 44px;
@@ -37,14 +36,13 @@
     line-height: 15/12*100%;
     text-transform: uppercase;
     color: #FFFFFF;
-    @if ($array) {
+    @if ($width) {
       position: relative;
       &:after {
         content: "";
         position: absolute;
         right: 0;
         top: 0;
-        background: url("/src/images/arrow_forward.svg");
       }
     }
 
@@ -112,8 +110,9 @@
     }
   }
 }
-
 @mixin Toggle {
+  //___________input(type='checkbox')_____________
+
   input {
     position: relative;
     display: inline-block;
