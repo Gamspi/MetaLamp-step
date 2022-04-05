@@ -17,13 +17,16 @@ module.exports = {
         path: path.resolve(__dirname, "dist")
     },
     devServer: {
+        open: true,
         port: 3000,
-        hot: isDev
+        hot: isDev,
+        watchFiles:[path.resolve(__dirname,"src")]
     },
     optimization: {
         splitChunks: {
             chunks: "all"
-        }
+        },
+
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -31,8 +34,7 @@ module.exports = {
             filename: "index.html",
             minify: isProd
         }),
-        new HtmlWebpackPugPlugin({
-        }),
+        new HtmlWebpackPugPlugin({}),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].[hash].css"
@@ -52,7 +54,7 @@ module.exports = {
             },
             {
                 test: /\.(jpg|jpeg|png|svg)$/,
-                use: ["file-loader"]
+                use: ["file-loader" ]
             },
             {
                 test: /\.pug$/,
