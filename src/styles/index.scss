@@ -10,7 +10,8 @@
 header{
   background: #850000;
   height: 10px;
-  background: url("../images/header.jpg");
+
+
 }
 
 h1 {
@@ -19,7 +20,7 @@ h1 {
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: $DarkShade100;
+  color: $Dark100;
 
 }
 
@@ -29,7 +30,7 @@ h2 {
   font-weight: 700;
   font-size: 19px;
   line-height: 23/19*100%;
-  color: $DarkShade100;
+  color: $Dark100;
 
 }
 
@@ -40,7 +41,7 @@ h3 {
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  color: $DarkShade100;
+  color: $Dark100;
 }
 
 body {
@@ -49,9 +50,10 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 171%;
-  color: $DarkShade75;
+  color: $Dark75;
 }
 
 
 
 
+@include btnBlue(100%)

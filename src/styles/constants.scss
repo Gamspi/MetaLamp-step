@@ -1,8 +1,8 @@
-$DarkShade100: #1F2041;
-$DarkShade75: rgba(31, 32, 65, 0.75);
-$DarkShade50: rgba(31, 32, 65, 0.5);
-$DarkShade25: rgba(31, 32, 65, 0.25);
-$DarkShade5: rgba(31, 32, 65, 0.05);
+$Dark100: rgb(31, 32, 65,);
+$Dark75: transparentize($Dark100, 0.25);
+$Dark50: transparentize($Dark100, 0.5);
+$Dark25: transparentize($Dark100, 0.75);
+$Dark5: transparentize($Dark100, 0.95);
 $Purple: #BC9CFF;
 $Green: #6FCF97;
 
