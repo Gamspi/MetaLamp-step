@@ -1,2 +1,2 @@
-import './styles/index.scss'
-import './components/ui kit/RangeSLiider'
+
+import "./styles/index.scss"
