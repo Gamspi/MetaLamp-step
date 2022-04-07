@@ -1,0 +1,9 @@
+mixin radioButton(name, value, checked)
+    .radio-button
+        .radio-button__input
+            if(checked)
+                input(type="radio" name=`${name}` checked)
+            else
+                input(type="radio" name=`${name}` )
+        .radio-button__text
+        span=`${value}`

@@ -1,0 +1,64 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .toggle__input {
+    display: flex;
+position: absolute;
+
+    input {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      border-radius: 10px;
+
+      appearance: none;
+      background: #ffffff;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        border: 1px solid $Dark25;
+        box-sizing: border-box;
+        border-radius: 10px;
+        transition: all 0.3s;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        left: 4px;
+        top: 4px;
+        background: $Dark25;
+        border-radius: 50%;
+        transition: all 0.5s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+      }
+
+      &:checked {
+
+        &:before {
+          transform: translateX(20px);
+          background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+        }
+
+        &:after {
+          border-color: $Purple;
+        }
+      }
+    }
+  }
+p{
+  margin-left: 50px;
+  min-width: 100%;
+}
+}

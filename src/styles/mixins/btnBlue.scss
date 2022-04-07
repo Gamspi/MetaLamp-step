@@ -1,0 +1,34 @@
+@mixin btnBlue($width:99px) {
+  button {
+    width: $width;
+    height: 44px;
+    background: linear-gradient(180deg, $Purple 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15/12*100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @if ($width) {
+      position: relative;
+      &:after {
+        content: "";
+        height: 44px;
+        width: 44px;
+        background: url("../../images/arrow.svg") center no-repeat;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &:hover {
+      opacity: 0.5
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}

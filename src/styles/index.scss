@@ -1,59 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import "mixins";
+@import "mixins/index";
 @import "constants";
 @import "rengeSlider";
-* {
-  block-size: border-box;
-  padding: 0;
-  margin: 0;
-}
-header{
-  background: #850000;
-  height: 10px;
-
-
-}
-
-h1 {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  color: $Dark100;
-
-}
-
-h2 {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 23/19*100%;
-  color: $Dark100;
-
-}
-
-h3 {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $Dark100;
-}
-
-body {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 171%;
-  color: $Dark75;
-}
-
-
-
-
-@include btnBlue(100%)
+@import "radio-button";
+@import "global";
+@import "chekbox";
+@import "toggle";
+@import "likeButton";

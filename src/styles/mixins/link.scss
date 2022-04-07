@@ -1,0 +1,15 @@
+@mixin link {
+  a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15/12*100%;
+    text-transform: uppercase;
+    color: $Purple;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(31, 32, 65, 0.5);;
+    }
+  }
+}

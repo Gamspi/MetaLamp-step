@@ -1,0 +1,25 @@
+@mixin styledInput {
+  background: #FFFFFF;
+  border: 1px solid $Dark25;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  height: 44px;
+  color: $Dark75;
+
+  &::placeholder {
+    color: $Dark25;
+  }
+
+  &:focus, &:hover {
+    outline: 1px solid rgba(31, 32, 65, 0.25);
+    line-height: 171%;
+    color: $Dark75;
+
+    &::placeholder {
+      color: $Dark50;
+    }
+  }
+}
