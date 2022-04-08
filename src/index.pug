@@ -2,14 +2,19 @@ include components/mixins/index
 include components/ui_kit/index
 doctype html
 include components/head
+doctype html
 body
     .wrapper
         include components/header
             .radio-buttons
-                +radioButton("gender","Мужчина",true)
+                +radioButton("gender","Мужчина")
+                +radioButton("gender","Мужчина")
             +checkbox("vdsvfsd")
             +toggle("Получать спецпредложения")
-            +likeButton(3)
-
+            +likeButton(12)
+            +rateButton(3)
+            +rateButton(3)
+            +dropdown("sfes")
+        a(href="./test.pug") test
             block content
         include components/footer

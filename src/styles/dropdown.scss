@@ -1,0 +1,50 @@
+.dropdown {
+  position: relative;
+  width: 266px;
+  min-height: 44px;
+  border: 1px solid $Dark25;
+  border-radius: 3px 3px 0 0;
+
+  &__status {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    color: $Dark75;
+    padding-left: 15px;
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      background: url("../images/expand_more.svg") center no-repeat;
+      border: none;
+    }
+  }
+
+  &__options {
+    height: 0;
+  }
+
+  &__option {
+    height: 0;
+overflow: hidden;
+
+  }
+
+  &:hover {
+    border-radius: 3px 3px 3px 3px;
+
+    border: 1px solid $Dark50;
+
+    .dropdown__options {
+      height: 100%;
+      border-top: 1px solid $Dark50;
+
+    }
+    .dropdown__option {
+      height: 100%;
+    }
+  }
+}
