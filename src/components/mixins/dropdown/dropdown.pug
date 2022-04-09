@@ -1,0 +1,15 @@
+mixin dropdown(name, ...options)
+
+    .dropdown(name=`${name}`)
+        .dropdown__status
+            p text
+            button
+        ul.dropdown__options
+            each option in options
+                li.dropdown__option
+                    .dropdown__lable
+                        span=option
+                    .dropdown__navigate
+                        button -
+                        p 0
+                        button +

@@ -1,9 +1,14 @@
+
 .dropdown {
   position: relative;
   width: 266px;
-  min-height: 44px;
-  border: 1px solid $Dark25;
-  border-radius: 3px 3px 0 0;
+  min-height: 100%;
+  box-sizing: inherit;
+  overflow: hidden;
+  padding-bottom: 200px;
+  z-index: 3;
+  margin-bottom: -200px;
+  border-radius: 4.5px 4.5px 0 0;
 
   &__status {
     height: 44px;
@@ -11,7 +16,11 @@
     align-items: center;
     color: $Dark75;
     padding-left: 15px;
-
+    @include font(normal, 400, 14, 24, $Dark75);
+    background: #FFFFFF;
+    border-radius: 4.5px 4.5px 0 0;
+    border: 1px solid $Dark25;
+    //z-index: 100;
     button {
       position: absolute;
       top: 0;
@@ -24,27 +33,71 @@
   }
 
   &__options {
-    height: 0;
+    transform: translateY(-100%);
+    background: #FFFFFF;
+    border-radius: 0 0 4.5px 4.5px;
+    border: 1px solid $Dark25;
+    transition: all 2s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
   }
 
   &__option {
-    height: 0;
-overflow: hidden;
+    overflow: hidden;
+    @include font(normal, 700, 12, 15, $Dark100);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 7px 7px 15px;
+    transition: all 2s;
+    z-index: -1;
+  }
 
+  &__navigate {
+    display: flex;
+    align-items: center;
+    width: 92px;
+    justify-content: space-between;
+
+    button {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border: 1px solid $Dark50;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: none;
+      color: $Dark50;
+      transition: all 2s;
+
+
+      &:disabled {
+        border: 1px solid $Dark25;
+        color: $Dark25;
+      }
+    }
   }
 
   &:hover {
-    border-radius: 3px 3px 3px 3px;
-
-    border: 1px solid $Dark50;
-
-    .dropdown__options {
-      height: 100%;
-      border-top: 1px solid $Dark50;
+    .dropdown__status {
 
     }
+
+    .dropdown__options {
+      border-top: none;
+      opacity: 1;
+      transform: translateY(0);
+
+    }
+
+    .dropdown__navigate {
+    }
+
     .dropdown__option {
-      height: 100%;
     }
   }
 }
